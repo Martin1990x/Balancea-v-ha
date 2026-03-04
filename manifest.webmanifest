@@ -1,0 +1,25 @@
+{
+  "name": "Balancea – Váha",
+  "short_name": "Balancea",
+  "description": "Vizualizace aktiv, pasiv a hotovosti na animované váze.",
+  "start_url": "./",
+  "display": "standalone",
+  "scope": "./",
+  "background_color": "#f1f5f9",
+  "theme_color": "#0f172a",
+  "lang": "cs",
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

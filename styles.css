@@ -1,0 +1,194 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  line-height: 1.4;
+  --bg: #f1f5f9;
+  --card: #ffffff;
+  --ink: #0f172a;
+  --muted: #475569;
+  --accent: #2563eb;
+  --brick: #b45309;
+  --coin: #d97706;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.app-header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+.form-grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+label {
+  display: grid;
+  gap: 0.4rem;
+  font-weight: 600;
+}
+
+input {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+}
+
+.scale-wrap {
+  min-height: 240px;
+  display: grid;
+  place-items: center;
+}
+
+.scale {
+  position: relative;
+  width: min(100%, 560px);
+  height: 200px;
+  transform-origin: center 120px;
+  transition: transform 500ms ease;
+  will-change: transform;
+}
+
+.beam {
+  position: absolute;
+  top: 60px;
+  left: 10%;
+  width: 80%;
+  height: 10px;
+  background: #334155;
+  border-radius: 999px;
+}
+
+.fulcrum {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 26px solid transparent;
+  border-right: 26px solid transparent;
+  border-bottom: 90px solid #64748b;
+}
+
+.pan {
+  position: absolute;
+  top: 78px;
+  width: 42%;
+  min-height: 95px;
+  border: 2px solid #64748b;
+  border-radius: 12px;
+  padding: 0.4rem;
+  background: #e2e8f0;
+}
+
+.left-pan {
+  left: 0;
+}
+
+.right-pan {
+  right: 0;
+}
+
+.pan h3 {
+  margin: 0;
+  font-size: 0.78rem;
+}
+
+.unit-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.4rem;
+}
+
+.brick,
+.coin {
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.brick {
+  width: 22px;
+  height: 12px;
+  background: var(--brick);
+}
+
+.coin {
+  width: 12px;
+  height: 12px;
+  background: var(--coin);
+  border-radius: 999px;
+}
+
+.muted {
+  color: var(--muted);
+  margin-top: 0;
+}
+
+.breakdown-list,
+.snapshot-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.snapshot-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.snapshot-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+button {
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.45rem 0.65rem;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: #475569;
+}
+
+button.danger {
+  background: #b91c1c;
+}
+
+.install-button {
+  background: #0ea5e9;
+}
