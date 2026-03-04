@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f172a" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="assets/icons/icon-192.svg" type="image/svg+xml" />
+    <title>Balancea – Váha</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>Balancea – Váha</h1>
+      <button id="installButton" class="install-button" hidden>Instalovat aplikaci</button>
+    </header>
+
+    <main class="layout">
+      <section class="card">
+        <h2>Finanční vstupy</h2>
+        <form id="balanceForm" class="form-grid">
+          <label>
+            Aktiva (Kč)
+            <input id="assets" name="assets" type="number" min="0" step="5000" value="0" required />
+          </label>
+          <label>
+            Pasiva (Kč)
+            <input id="liabilities" name="liabilities" type="number" min="0" step="5000" value="0" required />
+          </label>
+          <label>
+            Hotovost (Kč)
+            <input id="cash" name="cash" type="number" min="0" step="5000" value="0" required />
+          </label>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Váha</h2>
+        <div class="scale-wrap">
+          <div class="scale" id="scale">
+            <div class="beam"></div>
+            <div class="fulcrum"></div>
+            <div class="pan left-pan">
+              <h3>Levá miska (Aktiva + Hotovost)</h3>
+              <div id="leftUnits" class="unit-row"></div>
+            </div>
+            <div class="pan right-pan">
+              <h3>Pravá miska (Pasiva)</h3>
+              <div id="rightUnits" class="unit-row"></div>
+            </div>
+          </div>
+        </div>
+        <p id="tiltInfo" class="muted"></p>
+      </section>
+
+      <section class="card">
+        <h2>Přehled převodu</h2>
+        <ul id="breakdownList" class="breakdown-list"></ul>
+      </section>
+
+      <section class="card">
+        <div class="snapshot-header">
+          <h2>Snapshoty</h2>
+          <button id="saveSnapshot" type="button">Uložit snapshot</button>
+        </div>
+        <ul id="snapshotList" class="snapshot-list"></ul>
+      </section>
+    </main>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
